@@ -3,7 +3,7 @@ const { getModule } = require('powercord/webpack');
 const { inject, uninject } = require('powercord/injector');
 const popout = require('./Popout');
 
-module.exports = class OpenLinks extends Plugin {
+module.exports = class OpenLinksInDiscord extends Plugin {
   async startPlugin () {
     this.loadStylesheet('./style.scss');
     const Anchor = await getModule(x => x.default?.displayName === 'Anchor');
@@ -22,6 +22,7 @@ module.exports = class OpenLinks extends Plugin {
       return res;
     });
     Object.assign(Anchor.default, oDefault);
+    Anchor.default.toString = () => oDefault.toString()
   }
 
   openPopout (props, title) {
