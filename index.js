@@ -22,7 +22,7 @@ module.exports = class OpenLinksInDiscord extends Plugin {
       return res;
     });
     Object.assign(Anchor.default, oDefault);
-    Anchor.default.toString = () => oDefault.toString()
+    Anchor.default.toString = oDefault.toString;
   }
 
   openPopout (props, title) {

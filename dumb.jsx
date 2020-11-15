@@ -1,4 +1,6 @@
 const { React, getModule } = require('powercord/webpack');
+const { PopoutWindow, Spinner } = require('powercord/components');
+
 const { Spinner } = require('powercord/components');
 function Popout (props) {
   const divRef = div => {
