@@ -1,7 +1,7 @@
 {
   "name": "Open Links In Discord",
-  "description": "Plugin Description",
-  "author": "Plugin Author",
-  "license": "Plugin License",
+  "description": "Lets you press shift while clicking a link to open it in a popup",
+  "author": "AAGaming#9395",
+  "license": "MIT",
   "version": "0.0.1"
 }
