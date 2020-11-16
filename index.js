@@ -26,9 +26,7 @@ module.exports = class OpenLinksInDiscord extends Plugin {
   }
 
   openPopout (props, title) {
-    const windowId = `DISCORD_EXT_LINK_${(Math.random().toString(36) + Date.now()).substring(2, 7)}`;
-    popout({ ...props,
-      windowId }, title, windowId);
+    popout({ ...props }, title, `DISCORD_EXT_LINK_${(Math.random().toString(36) + Date.now()).substring(2, 7)}`);
   }
 
   pluginWillUnload () {
